@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Edit Students</title>
+  <link href="bootstrap.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Teacher's gradebook</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="edit.html">Edit Students</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Project</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="container mt-5">
+    <h1 class="display-6">Edit Page Edit Student</h1>
+    <form id="formularzUcznia">
+      <div class="form-group">
+        <div class="form-group">
+          <label for="id">Id:</label>
+          <input type="number" class="form-control" id="id" name="id">
+        </div>
+        <label for="imie">Name:</label>
+        <input type="text" class="form-control" id="name" name="name">
+      </div>
+      <div class="form-group">
+        <label for="grade">Grade:</label>
+        <input type="number" class="form-control" id="grade" name="grade">
+      </div>
+      <div class="form-group">
+        <label for="age">Age:</label>
+        <input type="number" class="form-control" id="age" name="age">
+      </div>
+      <button type="submit" class="btn btn-primary">Accept change</button>
+      <button type="submit" class="btn btn-danger">Delete Students</button>
+    </form>
+
+
+  </div>
+
+  <script src="bootstrap.js"></script>
+
+</body>
+
+</html>

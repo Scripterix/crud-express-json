@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Project Express Api Json</title>
+  <link href="bootstrap.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Teacher's gradebook</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="edit.html">Edit Students</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Project</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="container mt-5">
+    <h1 class="display-6">About Project Teacher's gradebook</h1>
+    <p class="lead">Lorem ipsum, dolor sit amet Based on your requirements, here's a suggested structure for your
+      project:
+    </p>
+
+    <ol class="fs-5">
+      <li>server.js: This is your server-side JavaScript file. It will use Express to create API endpoints
+        for creating,
+        reading, updating, and deleting students. It will also serve your static files (HTML, CSS, client-side
+        JavaScript)..</li>
+
+      <li>public/: This directory will contain your static files.</li>
+
+      <li>index.html: This page will display a list of all students. It will make fetch requests to your API to get the
+        list of students and update the UI.</li>
+
+      <li>edit.html: This page will display a form for editing a student. It will make fetch requests to your API to get
+        the current data for the student, update the student, and delete the student.</li>
+
+      <li>main.js: This is your client-side JavaScript file. It will contain the code for making fetch requests to your
+        API and updating the UI based on the response.</li>
+
+      <li> students.json: This file will store your student data in JSON format. Your server-side code will read from
+        and write to this file..</li>
+      <li>webpack.config.js: This file will contain your Webpack configuration. You'll use Webpack to bundle your
+        client-side JavaScript code..</li>
+    </ol>
+
+
+  </div>
+
+  <script src="bootstrap.js"></script>
+
+</body>
+
+</html>

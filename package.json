@@ -1,0 +1,38 @@
+{
+  "name": "crud-express-json",
+  "version": "1.0.0",
+  "description": "Crud Expres JSON Bootstrap ",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm run start",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Scripterix/crud-express-json.git"
+  },
+  "keywords": [
+    "crud-express-json",
+    "Crud",
+    "Expres",
+    "JSON",
+    "Bootstrap",
+    "Teachers",
+    "LogBook",
+    "Teacher's gradebook"
+  ],
+  "author": "Scripterix",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Scripterix/crud-express-json/issues"
+  },
+  "homepage": "https://github.com/Scripterix/crud-express-json#readme",
+  "dependencies": {
+    "express": "^4.19.2",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
