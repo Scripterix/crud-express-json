@@ -31,27 +31,38 @@
     </div>
   </nav>
 
+  <div class="spinner-border text-primary " role="status" hidden id="spinner">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+
+  <div class="alert alert-success alert-dismissible fade show m-2" role="alert" hidden id="alertSuccess">
+    Success ! A New Student has been add.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  <div class="alert alert-danger alert-dismissible fade show m-2 " role="alert" hidden id="alertDanger">
+    Danger ! A New Student has not been add.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+
+
 
   <div class="container mt-5">
     <h1 class="display-6">Home Page Add Student</h1>
-    <form id="formularzUcznia">
+    <form id="studentForm">
+
       <div class="form-group">
-        <label for="imie">Id:</label>
-        <input type="number" class="form-control" id="id" name="id">
-      </div>
-      <div class="form-group">
-        <label for="imie">Name:</label>
-        <input type="text" class="form-control" id="name" name="Name">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name" name="Name" autocomplete="on" required>
       </div>
       <div class="form-group">
         <label for="grade">Grade:</label>
-        <input type="number" class="form-control" id="grade" name="grade">
+        <input type="text" class="form-control" id="grade" name="grade" autocomplete="on" required>
       </div>
       <div class="form-group">
         <label for="age">Age:</label>
-        <input type="number" class="form-control" id="age" name="age">
+        <input type="number" class="form-control" id="age" name="age" autocomplete="on" required>
       </div>
-      <button type="submit" class="btn btn-primary mt-2">Add Students</button>
+      <button type="submit" class="btn btn-primary mt-2" id="submit">Add Students</button>
     </form>
 
     <div class="container text-center border border-1 mt-5">
@@ -69,8 +80,8 @@
       </table>
     </div>
 
-    <script src="bootstrap.js"></script>
-    <script src="main.js"></script>
+    <script src="./bootstrap.bundle.js"></script>
+    <script src="./main.js"></script>
 
 </body>
 
