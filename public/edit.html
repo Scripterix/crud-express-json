@@ -1,65 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Form Edit Students</title>
+  <title>Edit Students</title>
   <link href="bootstrap.css" rel="stylesheet">
 </head>
-
 <body>
-
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">Teacher's gradebook</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="edit.html">Edit Students</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">About Project</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
+<div class="container">
+  <div class="alert alert-success alert-dismissible fade show m-2" role="alert" hidden id="alertSuccessUpdate">
+    Success ! A New Student has been update. You may see the changes <a href="index.html" class="alert-link">here</a>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+</div>
+<div class="container">
+  <div class="alert alert-danger alert-dismissible fade show m-2" role="alert" hidden id="alertDangerUpdate">
+    Student has been deleted from file. You may see changes <a href="index.html" class="alert-link">here</a>.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<div class="container">
+  <ul class="nav nav-underline">
+  <li class="nav-item">
+    <a class="nav-link"  href="index.html">Teacher's GL</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="edit.html">Edit</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="about.html">About</a>
+  </li>
+</ul>
+</div>
+ 
 
   <div class="container mt-5">
-    <h1 class="display-6">Edit Page Edit Student</h1>
-    <form id="formularzUcznia">
+    <h1 class="display-6">Edit Student</h1>
+    <p class="lead">This is a simple Teacher's Grade logbook based on API Express.js and data store in JSON. The Edit is visible only due to development. The visiibility should work in prod only by Click from student's row for edit ( Get data by :id )</p>
+    <form id="updateForm">
       <div class="form-group">
-        <div class="form-group">
-          <label for="id">Id:</label>
-          <input type="number" class="form-control" id="id" name="id">
-        </div>
-        <label for="imie">Name:</label>
-        <input type="text" class="form-control" id="name" name="name">
+        <label for="id">ID:</label>
+        <input type="text" class="form-control" id="idUpdate" name="id" readonly>
+      </div>
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="nameUpdate" name="name" autocomplete="on" required>
       </div>
       <div class="form-group">
         <label for="grade">Grade:</label>
-        <input type="number" class="form-control" id="grade" name="grade">
+        <input type="text" class="form-control" id="gradeUpdate" name="grade" autocomplete="on" required>
       </div>
       <div class="form-group">
         <label for="age">Age:</label>
-        <input type="number" class="form-control" id="age" name="age">
+        <input type="number" class="form-control" id="ageUpdate" name="age" autocomplete="on" required>
       </div>
-      <button type="submit" class="btn btn-primary">Accept change</button>
-      <button type="submit" class="btn btn-danger">Delete Students</button>
+      <button type="submit" class="btn btn-primary mt-2" id="btnAcceptUpdate">Accept Changes</button>
+      <button type="button" class="btn btn-danger mt-2" id="btnDeleteStudent">Delete Student</button>
     </form>
-
-
   </div>
+  <script src="bootstrap.bundle.js"></script>
+  <script src="update.js"></script>
 
-  <script src="bootstrap.js"></script>
+
 
 </body>
-
 </html>

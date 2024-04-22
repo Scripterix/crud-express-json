@@ -1,22 +1,23 @@
-// pls provide content for readem and add all cli command from chat 
-# Project Title
+ # Project Title
 
-This is the README file for the project.
+This is the README file for the Teacher's Grade logbook based on API Express.js and data store in JSON
 
 ## Description
 
-This project is aimed at demonstrating the usage of the CLI commands discussed in the chat.
+This project is aimed at demonstrating the usage of Api Express JSON JavaScript full CRUD.
 
 ## CLI Commands
 
-Here are the CLI commands that were discussed in the chat:
+Here are the CLI commands that will drvie you to working example:
 
+- npm install express --save
 - npm install nodemon --save-dev
 - npm install uuid --save
 - mkdir public
 - touch public/index.html public/edit.html public/about.html
 - nodemon --ext js,mjs,cjs,json,html server.js
 - rs manual restart
+
 
 ## Start scripts
 
@@ -33,20 +34,20 @@ Here are the CLI commands that were discussed in the chat:
 
 ## Beginers explanations
 
-**npm run test:** This command runs the test suite for your application. The specific command it runs depends on how you've set up your tests. For example, if you're using a testing framework like Jest, the "test" script might be set to "jest".
+**npm run test:** This command runs the test suite for your application. The specific command it runs depends on how you've set up your tests. For example, if you're using a testing framework like Jest, the "test" script might be set to "jest". VSC you may use debug mode.
 
 **npm run start:** This command usually starts your application. For a Node.js application, this might be set to "node server.js" or similar, which would start the server defined in server.js.
 
 **npm run dev:** This command is often used in development and might start your application in a way that makes development easier. For example, it might start your server and automatically restart it whenever you save a file. This could be achieved using a tool like nodemon.
 
-Some more info for --watch
+## Some more info for --watch
 
 - npm install -g live-server
 - live-server
 - npm install -g browser-sync
 - browser-sync start --server --files "*.*"
 
-Please refer to the documentation or chat history for more details on how to use these commands.
+Please refer to the documentation for more details on how to use these commands.
 
 ## Installation
 
@@ -57,6 +58,7 @@ To install and run this project, follow these steps:
 
   ```bash
   npm install
+
   ```
 
 3. Execute the project using the following command:
@@ -82,13 +84,14 @@ Contributions are welcome! If you would like to contribute to this project, plea
 3. Make your changes.
 4. Submit a pull request.
 
+The endpoint for students is **/api/students/** and is ready to be extendent for example students, students-average, students-math, etc
+
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
 ## My notes 
 
-GitHub Copilot
 To kill a process running on a specific port (like 3000) on a Windows machine, follow these steps:
 
 Open the Command Prompt.
@@ -106,7 +109,7 @@ After running these commands, the process using port 3000 should be terminated, 
 
 ### Shape of Apps
 
-Based on your requirements, here's a suggested structure for your project:
+Requirements, here's a suggested structure for your project:
 
 server.js: This is your server-side JavaScript file. It will use Express to create API endpoints for creating, reading, updating, and deleting students. It will also serve your static files (HTML, CSS, client-side JavaScript).
 
@@ -120,26 +123,67 @@ main.js: This is your client-side JavaScript file. It will contain the code for 
 
 students.json: This file will store your student data in JSON format. Your server-side code will read from and write to this file.
 
-webpack.config.js: This file will contain your Webpack configuration. You'll use Webpack to bundle your client-side JavaScript code.
+* webpack.config.js: This file will contain your Webpack configuration. You'll use Webpack to bundle your client-side JavaScript code. (not applied / Docker plans)
 
 Here's a basic example of how you might set up your server.js file:
 
-### Server abd Client Side
 
-Based on your requirements, here's a suggested structure for your project:
+# Docs in readme.md are the terminal step by step*
+# App for Teacher's gradebook
 
-server.js: This is your server-side JavaScript file. It will use Express to create API endpoints for creating, reading, updating, and deleting students. It will also serve your static files (HTML, CSS, client-side JavaScript).
 
-public/: This directory will contain your static files.
+## npm init - y
 
-index.html: This page will display a list of all students. It will make fetch requests to your API to get the list of students and update the UI.
+Install Express Prod Dependency
 
-edit.html: This page will display a form for editing a student. It will make fetch requests to your API to get the current data for the student, update the student, and delete the student.
+## npm install express --save
 
-main.js: This is your client-side JavaScript file. It will contain the code for making fetch requests to your API and updating the UI based on the response.
+Install Nodemon Dev Dependency
 
-students.json: This file will store your student data in JSON format. Your server-side code will read from and write to this file.
+## npm install nodemon --save-dev
+## nodemon --ext js,mjs,cjs,json,html server.js
 
-webpack.config.js: This file will contain your Webpack configuration. You'll use Webpack to bundle your client-side JavaScript code.
+Create Structure Public and Config Server
 
-Here's a basic example of how you might set up your server.js file:
+## touch server.js
+
+## mkdir public
+
+## touch public/index.html public/edit.html public/about.html
+
+Server Config and Script Commands
+
+```Package.json
+"scripts": {
+    "test": "npm run start",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+```
+server.js
+
+```JavaScript
+express = require('express');
+app = express();
+app.use(express.static(__dirname + '/public'));
+app.listen(3000);
+console.log('Listening on port 3000');
+```
+
+## Add the Bootstrap CSS and JS and place them in the public.
+
+Html code available at the Scripterix Repo ( git clone ) the branch **finished**
+
+### https://github.com/Scripterix/crud-express-json.git
+
+[GitH Repo](https://github.com/Scripterix/crud-express-json.git)
+
+## Browser Sync 
+
+## npm install -g live-server
+
+## live-server
+
+## npm install -g browser-sync
+
+Visit [website OpenGateWeb](https://opengateweb.com) for more tech guide like this and Score/Stars this repo.

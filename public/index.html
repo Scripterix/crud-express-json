@@ -9,45 +9,37 @@
 </head>
 
 <body>
+<div class="container">
+  <ul class="nav nav-underline">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="index.html">Teacher's GL</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="edit.html">Edit</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="about.html">About</a>
+    </li>
+  </ul>
+</div>
+  
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">Teacher's gradebook</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="edit.html">Edit Students!</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">About Project</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <div class="spinner-border text-primary " role="status" hidden id="spinner">
-    <span class="visually-hidden">Loading...</span>
-  </div>
-
-  <div class="alert alert-success alert-dismissible fade show m-2" role="alert" hidden id="alertSuccess">
+  <div class="container">
+    <div class="alert alert-success alert-dismissible fade show m-2" role="alert" hidden id="alertSuccess">
     Success ! A New Student has been add.
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
   </div>
-  <div class="alert alert-danger alert-dismissible fade show m-2 " role="alert" hidden id="alertDanger">
-    Danger ! A New Student has not been add.
+  </div>
+  <div class="container">
+    <div class="alert alert-warning alert-dismissible fade show m-2" role="alert" hidden id="alertWarning">
+    Warning ! A New Student has not been add.
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
   </div>
 
-
-
   <div class="container mt-5">
     <h1 class="display-6">Home Page Add Student</h1>
+    <p class="lead">This is a simple Teacher's Grade logbook based on API Express.js and data store in JSON.</p>
     <form id="studentForm">
 
       <div class="form-group">
@@ -66,12 +58,13 @@
     </form>
 
     <div class="container text-center border border-1 mt-5">
-      <table id="student-table" class="table">
+      <table id="student-table" class="table table-striped text-start">
         <thead>
           <tr>
-            <th scope="col">Name</th>
+            <th scope="col" class="fw-bold">Name</th>
             <th scope="col">Grade</th>
             <th scope="col">Age</th>
+            <th scope="col">Edit</th>
           </tr>
         </thead>
         <tbody>
